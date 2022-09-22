@@ -1,0 +1,9 @@
+<h1>Parent Component</h1>
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="number" [(ngModel)]="channelName">
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+    <h2 #projectedContent>Please subscribe to WebTechTalk</h2> <!-- template reference variable -->
+</app-child>
